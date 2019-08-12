@@ -22,12 +22,15 @@ class HomeHandler(webapp2.RequestHandler):
             nickname = google_user.nickname()
             email = google_user.email()
             self.response.write(template.render({
-                'login': users.create_logout_url('/')
-            }));
-        else:  # else, show the login page
+                'login': users.create_logout_url('/'),
+                'nickname': nickname,
+                'email': email
+            }))
+        else:
             self.response.write(template.render({
                 'login': users.create_login_url('/')
-            }));
+            
+            }))
 
 
 app = webapp2.WSGIApplication([
