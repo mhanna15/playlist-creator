@@ -14,26 +14,29 @@ jinja_env = jinja2.Environment(
 
 class HomeHandler(webapp2.RequestHandler):
     def get(self):
-        
-    def post(self):
-        genre = self.request.get(genre)
-        currentUser = users.get_current_user()
-        email = currentUser.email()
-        dbUser = User.query().filter(User.email == email).get()
-        dbUser.genre = genre
-        dbUser.put()
+        template = jinja_env.get_template('templates/main.html')
+        self.redirect("/questions")
+    
+    # def post(self):
+    #     genre = self.request.get(genre)
+    #     currentUser = users.get_current_user()
+    #     email = currentUser.email()
+    #     dbUser = User.query().filter(User.email == email).get()
+    #     dbUser.genre = genre
+    #     dbUser.put()
 
-    def post(self):
-        mood = self.request.get(mood)
-        currentUser = users.get_current_user()
-        email = currentUser.email()
-        dbUser = User.query().filter(User.email == email).get()
-        dbUser.genre = mood
-        dbUser.put()
+    # def post(self):
+    #     mood = self.request.get(mood)
+    #     currentUser = users.get_current_user()
+    #     email = currentUser.email()
+    #     dbUser = User.query().filter(User.email == email).get()
+    #     dbUser.genre = mood
+    #     dbUser.put()
 
 class QuestionsHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/questions.html')
+        self.response.write(template.render())
 
 
 app = webapp2.WSGIApplication([
