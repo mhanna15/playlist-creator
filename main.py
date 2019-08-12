@@ -40,6 +40,14 @@ class HomeHandler(webapp2.RequestHandler):
         dbUser.genre = genre
         dbUser.put()
 
+    def post(self):
+        mood = self.request.get(mood)
+        currentUser = users.get_current_user()
+        email = currentUser.email()
+        dbUser = User.query().filter(User.email == email).get()
+        dbUser.genre = mood
+        dbUser.put()
+
 class QuestionsHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/questions.html')
