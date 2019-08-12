@@ -32,8 +32,12 @@ class HomeHandler(webapp2.RequestHandler):
             
             }))
 
+class QuestionsHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('templates/questions.html')
 
 
 app = webapp2.WSGIApplication([
     ('/', HomeHandler),
+    ('/questions.html', QuestionsHandler),
 ], debug=True)
