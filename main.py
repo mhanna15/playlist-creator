@@ -14,24 +14,7 @@ jinja_env = jinja2.Environment(
 
 class HomeHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_env.get_template('templates/main.html')
-        google_user = users.get_current_user()
-
-        # If the user exists, then grab more info
-        if google_user:
-            nickname = google_user.nickname()
-            email = google_user.email()
-            self.response.write(template.render({
-                'login': users.create_logout_url('/'),
-                'nickname': nickname,
-                'email': email
-
-            }))
-        else:
-            self.response.write(template.render({
-                'login': users.create_login_url('/')
-
-            }))
+        
     def post(self):
         genre = self.request.get(genre)
         currentUser = users.get_current_user()
