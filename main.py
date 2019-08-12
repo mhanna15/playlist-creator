@@ -16,13 +16,15 @@ class HomeHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/main.html')
         google_user = users.get_current_user()
+
+        # If the user exists, then grab more info
         if google_user:
             nickname = google_user.nickname()
             email = google_user.email()
             self.response.write(template.render({
                 'login': users.create_logout_url('/')
             }));
-        else:
+        else:  # else, show the login page
             self.response.write(template.render({
                 'login': users.create_login_url('/')
             }));
