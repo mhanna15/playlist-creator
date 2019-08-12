@@ -25,12 +25,20 @@ class HomeHandler(webapp2.RequestHandler):
                 'login': users.create_logout_url('/'),
                 'nickname': nickname,
                 'email': email
+
             }))
         else:
             self.response.write(template.render({
                 'login': users.create_login_url('/')
-            
+
             }))
+    def post(self):
+        genre = self.request.get(genre)
+        currentUser = users.get_current_user()
+        email = currentUser.email()
+        dbUser = User.query().filter(User.email == email).get()
+        dbUser.genre = genre
+        dbUser.put()
 
 class QuestionsHandler(webapp2.RequestHandler):
     def get(self):
@@ -39,5 +47,5 @@ class QuestionsHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/', HomeHandler),
-    ('/questions.html', QuestionsHandler),
+    ('/questions', QuestionsHandler),
 ], debug=True)
