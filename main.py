@@ -24,9 +24,10 @@ class HomeHandler(webapp2.RequestHandler):
             self.response.write(template.render({
                 'login': users.create_logout_url('/')
             }));
-        else:  # else, show the login page
+        else:
             self.response.write(template.render({
                 'login': users.create_login_url('/')
+            
             }));
 
 

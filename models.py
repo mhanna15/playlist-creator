@@ -1,6 +1,7 @@
 class User(ndb.Model):
     username = ndb.StringProperty(required = True)
-    email = ndb.StringProperty(required = False)
+    email = ndb.StringProperty(required = True)
+    preferences = ndb.StringProperty(required = True, repeated = True)
 
 class Song(ndb.Model):
     artist =  ndb.StringProperty(required = True)
