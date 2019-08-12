@@ -15,22 +15,16 @@ jinja_env = jinja2.Environment(
 class HomeHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/main.html')
-        self.response.write(template.render())
         google_user = users.get_current_user()
         if google_user:
             nickname = google_user.nickname()
             email = google_user.email()
-            logout_url = users.create_logout_url('/')
-            greeting = 'Welcome, {}! (<a href="{}">sign out</a>)'.format(
-                nickname, logout_url)
             self.response.write(template.render({
-                'greeting':greeting
+                'login': users.create_logout_url('/')
             }));
         else:
-            login_url= users.create_login_url('/');
-            greeting = '(<a href="{}"> Welcome User!</a>)'.format(login_url)
             self.response.write(template.render({
-                'greeting':greeting
+                'login': users.create_login_url('/')
             }));
 
 
