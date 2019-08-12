@@ -11,7 +11,8 @@ the_jinja_env = jinja2.Environment(
     autoescape=True)
 
 
-
+class SignUpHandler(webapp2.RequestHandler):
+    
 
 
 
