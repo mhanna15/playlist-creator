@@ -11,6 +11,7 @@ handlers:
   static_dir: styles
 - url: /.*
   script: main.app
+  login: required
 
 libraries:
 - name: jinja2
