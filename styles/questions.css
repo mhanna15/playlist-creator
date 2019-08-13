@@ -1,3 +1,28 @@
-#question1 {
-    
+section {
+  /* background-color: black; */
+  color: white;
+  margin: auto;
+  line-height: 60px;
+  font-size: 30px;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+div {
+  font-size: 25px;
+  font-weight: bold;
+
+}
+
+html {
+  background-color: #D7D017
 }
