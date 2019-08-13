@@ -43,7 +43,6 @@ class QuestionsHandler(webapp2.RequestHandler):
 
         }))
 
-
 app = webapp2.WSGIApplication([
     ('/', HomeHandler),
     ('/questions', QuestionsHandler),
