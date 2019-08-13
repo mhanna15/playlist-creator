@@ -27,3 +27,33 @@ angry.addEventListener('mouseenter', e => {
 angry.addEventListener('mouseleave', e => {
   angry.innerHTML = "Angry"
 });
+
+let romantic = document.querySelector("#romantic");
+
+romantic.addEventListener('mouseenter', e => {
+  romantic.innerHTML = "😘"
+});
+
+romantic.addEventListener('mouseleave', e => {
+  romantic.innerHTML = "Romantic"
+});
+
+let lonely = document.querySelector("#lonely");
+
+lonely.addEventListener('mouseenter', e => {
+  lonely.innerHTML = "😞"
+});
+
+lonely.addEventListener('mouseleave', e => {
+  lonely.innerHTML = "Lonely"
+});
+
+let hype = document.querySelector("#hype");
+
+hype.addEventListener('mouseenter', e => {
+  hype.innerHTML = "🤪"
+});
+
+hype.addEventListener('mouseleave', e => {
+  hype.innerHTML = "Hype"
+});
