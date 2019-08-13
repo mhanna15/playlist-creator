@@ -1,44 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+<body>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Questions</title>
     <link rel="stylesheet" href="styles/questions.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="//db.onlinewebfonts.com/c/e43ccd3c2c2c13628d86f0b1b5a580d3?family=Recta" rel="stylesheet" type="text/css"/>
 
 </head>
-<body>
+<div id = "container">
+<h1>Please Answer These Questions So We Can Create This Playlist</h1>
+</div>
 
-    <h1>Please Answer These Questions So We Can Create This Playlist</h1>
-    <div> What mood are you in today?</div>
-    <section>
+<div id = "quiz">
+<section>
+
     <form id="moods">
-        <input type="checkbox" name="mood" value="happy"> Happy<br>
-        <input type="checkbox" name="mood" value="Sad">Sad<br>
-        <input type="checkbox" name="mood" value="Angry"> Angry<br>
-        <input type="checkbox" name="mood" value="Romantic">Romantic<br>
-        <input type="checkbox" name="mood" value="Lonely"> Lonely<br>
-        <input type="checkbox" name="mood" value="Hype">Hype<br>
+        <!-- <section id = "topimage"><img src="images/topimage.jpg" alt="Doodle"></section> -->
+        <h2> What mood are you in today?</h2>
+        <input type="radio" name="mood" value="happy"> Happy<br>
+        <input type="radio" name="mood" value="Sad">Sad<br>
+        <input type="radio" name="mood" value="Angry"> Angry<br>
+        <input type="radio" name="mood" value="Romantic">Romantic<br>
+        <input type="radio" name="mood" value="Lonely"> Lonely<br>
+        <input type="radio" name="mood" value="Hype">Hype<br>
     </form>
-  </section>
-    <div>What genres would you like to listen to?</div>
-    <section>
+</section>
+<section>
     <form id="genres">
-        <input type="checkbox" name="genre" value="Rap"> Rap<br>
-        <input type="checkbox" name="genre" value="Jazz">Jazz<br>
-        <input type="checkbox" name="genre" value="Pop"> Pop<br>
-        <input type="checkbox" name="genre" value="Rock">Rock<br>
-        <input type="checkbox" name="genre" value="Classical"> Classical<br>
-        <input type="checkbox" name="genre" value="RandB">R&B<br>
+        <h2>What genres would you like to listen to?</h2>
+        <input type="radio" name="genre" value="Rap"> Rap<br>
+        <input type="radio" name="genre" value="Jazz">Jazz<br>
+        <input type="radio" name="genre" value="Pop"> Pop<br>
+        <input type="radio" name="genre" value="Rock">Rock<br>
+        <input type="radio" name="genre" value="Classical"> Classical<br>
+        <input type="radio" name="genre" value="RandB">R&B<br>
     </form>
-  </section>
+</section>
     <div>How many tracks do you want?</div>
     <form id="tracks">
         Quantity (between 1 and 40):
         <input type="number" name="quantity" min="1" max="40">
     </form>
     <input type="submit"><a href="/playlist"></a>
+</div>
+
 </body>
 </html>

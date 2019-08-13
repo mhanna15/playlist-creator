@@ -9,4 +9,4 @@ class User(ndb.Model):
 
 
 class Playlist(ndb.Model):
-    songs = mdb.StringProperty(required = True, repeated = True)
+    songs = ndb.StringProperty(required = True, repeated = True)
