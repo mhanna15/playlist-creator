@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+<body>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Questions</title>
-    <link rel="stylesheet" href="styles/questions.css">
+    <link rel="stylesheet" href="styles/questions.css"> 
+    <link href="//db.onlinewebfonts.com/c/e43ccd3c2c2c13628d86f0b1b5a580d3?family=Recta" rel="stylesheet" type="text/css"/>
+
 </head>
-<body>
+<div id = "container">
+<h1>Please Answer These Questions So We Can Create This Playlist</h1>
+</div>
 
-    <h1>Please Answer These Questions So We Can Create This Playlist</h1>
-    <div> What mood are you in today?</div>
-    <section>
+<div id = "quiz">
+<section>
     <form id="moods">
-        <input type="checkbox" name="mood" value="happy"> <span id="happy">Happy</span><br>
-        <input type="checkbox" name="mood" value="sad"> <span id="sad">Sad</span><br>
-        <input type="checkbox" name="mood" value="angry"> <span id="angry">Angry</span><br>
-        <input type="checkbox" name="mood" value="romantic"> <span id="romantic">Romantic</span><br>
-        <input type="checkbox" name="mood" value="lonely"> <span id="lonely">Lonely</span><br>
-        <input type="checkbox" name="mood" value="hype"> <span id="hype">Hype</span><br>
+        <h2>What mood are you in today?</h2>
+        
+        <input type="radio" name="mood" value="happy"> <span id="happy">Happy</span><br>
+        <input type="radio" name="mood" value="sad"> <span id="sad">Sad</span><br>
+        <input type="radio" name="mood" value="angry"> <span id="angry">Angry</span><br>
+        <input type="radio" name="mood" value="romantic"> <span id="romantic">Romantic</span><br>
+        <input type="radio" name="mood" value="lonely"> <span id="lonely">Lonely</span><br>
+        <input type="radio" name="mood" value="hype"> <span id="hype">Hype</span><br>
     </form>
-  </section>
-    <div>What genres would you like to listen to?</div>
-    <section>
+</section>
+<section>
     <form id="genres">
-        <input type="checkbox" name="genre" value="Rap"> Rap<br>
-        <input type="checkbox" name="genre" value="Jazz"> Jazz<br>
-        <input type="checkbox" name="genre" value="Pop"> Pop<br>
-        <input type="checkbox" name="genre" value="Classic Rock"> Classic Rock<br>
-        <input type="checkbox" name="genre" value="Classical"> Classical<br>
-        <input type="checkbox" name="genre" value="RandB"> R&B<br>
-        <input type="checkbox" name="genre" value="Alternative"> Alternative<br>
-        <input type="checkbox" name="genre" value="KPop"> Kpop<br>
-        <input type="checkbox" name="genre" value="EDM"> EDM<br>
-        <input type="checkbox" name="genre" value="Indie Rock"> Indie Rock<br>
+        <h2>What genres would you like to listen to?</h2>
+        <input type="radio" name="genre" value="Rap"> Rap<br>
+        <input type="radio" name="genre" value="Jazz"> Jazz<br>
+        <input type="radio" name="genre" value="Pop"> Pop<br>
+        <input type="radio" name="genre" value="Classic Rock"> Classic Rock<br>
+        <input type="radio" name="genre" value="Classical"> Classical<br>
+        <input type="radio" name="genre" value="RandB"> R&B<br>
+        <input type="radio" name="genre" value="Alternative"> Alternative<br>
+        <input type="radio" name="genre" value="KPop"> Kpop<br>
+        <input type="radio" name="genre" value="EDM"> EDM<br>
+        <input type="radio" name="genre" value="Indie Rock"> Indie Rock<br>
 
     </form>
-    <div>What activity are you doing today?</div>
     <section>
     <form id="activity">
+        <h2>What activity are you doing today?</h2>
         <input type="radio" name="activity" value="Going To Work"> Going To Work<br>
         <input type="radio" name="activity" value="Coming From Work"> Coming From Work<br>
         <input type="radio" name="activity" value="At The Gym"> At The Gym<br>
