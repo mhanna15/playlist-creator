@@ -16,7 +16,7 @@
 </div>
 
 <div id = "quiz">
-<form action='post' method='/playlist'>
+<form action='/playlist' method='post'>
     <section id='moods'>
         <h2>What mood are you in today?</h2>
         <input type="radio" name="mood" value="happy"> <span id="happy">Happy</span><br>
@@ -54,11 +54,11 @@
     </section>
     <section id='tracks'>
         <h2>How many tracks do you want?</h2>
-        <p>Quantity (between 1 and 100):</p>
+        <p>Quantity (between 1 and 500):</p>
         <input type="number" name="quantity" min="1" max="100">
     </section>
-</form>
     <a href="/playlist"><input type="submit"></a>
+</form>
     <script src='scripts/main.js'> </script>
 </body>
 </html>
