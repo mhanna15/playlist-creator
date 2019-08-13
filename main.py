@@ -14,6 +14,7 @@ jinja_env = jinja2.Environment(
 
 class HomeHandler(webapp2.RequestHandler):
     def get(self):
+        
         template = jinja_env.get_template('templates/main.html')
         self.redirect("/questions")
     
@@ -35,8 +36,12 @@ class HomeHandler(webapp2.RequestHandler):
 
 class QuestionsHandler(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
         template = jinja_env.get_template('templates/questions.html')
-        self.response.write(template.render())
+        self.response.write(template.render({
+            'nickname': user.nickname()
+
+        }))
 
 
 app = webapp2.WSGIApplication([
