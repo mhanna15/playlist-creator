@@ -25,7 +25,6 @@ grid-column: 1;
 
 #moods{
   border: 2px solid white;
-
   /* background-image: url('/images/topimage.jpg'); */
   grid-row: 2;
   padding: 20px;

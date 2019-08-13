@@ -1,6 +1,7 @@
 from google.appengine.ext import ndb
 
 class Song(ndb.Model):
+    mood = ndb.StringProperty(repeated = True)
     genre = ndb.StringProperty(required =  True)
     song = ndb.StringProperty(required =  True)
     artist = ndb.StringProperty(required =  True)
