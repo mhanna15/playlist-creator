@@ -22,13 +22,13 @@
   {% for song in songs %}
   <tr>
     <td>
-      {{song.title}}
+      {{song.song}}
     </td>
     <td>
       {{song.artist}}
     </td>
     <td>
-    {{song.duration}}
+      <a href='{{song.url}}'>Spotify</a>
     </td>
     <td>👍</td>
     <td>👎</td>

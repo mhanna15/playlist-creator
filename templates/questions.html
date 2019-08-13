@@ -16,20 +16,17 @@
 </div>
 
 <div id = "quiz">
-<section>
-    <form id="moods">
+<form action='/playlist' method='post'>
+    <section id='moods'>
         <h2>What mood are you in today?</h2>
-        
         <input type="radio" name="mood" value="happy"> <span id="happy">Happy</span><br>
         <input type="radio" name="mood" value="sad"> <span id="sad">Sad</span><br>
         <input type="radio" name="mood" value="angry"> <span id="angry">Angry</span><br>
         <input type="radio" name="mood" value="romantic"> <span id="romantic">Romantic</span><br>
         <input type="radio" name="mood" value="lonely"> <span id="lonely">Lonely</span><br>
         <input type="radio" name="mood" value="hype"> <span id="hype">Hype</span><br>
-    </form>
-</section>
-<section>
-    <form id="genres">
+    </section>
+    <section id='genres'>
         <h2>What genres would you like to listen to?</h2>
         <input type="radio" name="genre" value="Rap"> Rap<br>
         <input type="radio" name="genre" value="Jazz"> Jazz<br>
@@ -41,10 +38,7 @@
         <input type="radio" name="genre" value="KPop"> Kpop<br>
         <input type="radio" name="genre" value="EDM"> EDM<br>
         <input type="radio" name="genre" value="Indie Rock"> Indie Rock<br>
-
-    </form>
-    <section>
-    <form id="activity">
+    <section id='activity'>
         <h2>What activity are you doing today?</h2>
         <input type="radio" name="activity" value="Going To Work"> Going To Work<br>
         <input type="radio" name="activity" value="Coming From Work"> Coming From Work<br>
@@ -57,15 +51,14 @@
         <input type="radio" name="activity" value="Cooking"> Cooking<br>
         <input type="radio" name="activity" value="Meditation"> Meditation<br>
         <input type="radio" name="activity" value="Getting Ready"> Getting Ready<br>
-    </form>
     </section>
-  </section>
-    <div>How many tracks do you want?</div>
-    <form id="tracks">
-        Quantity (between 1 and 100):
+    <section id='tracks'>
+        <h2>How many tracks do you want?</h2>
+        <p>Quantity (between 1 and 500):</p>
         <input type="number" name="quantity" min="1" max="100">
-    </form>
+    </section>
     <a href="/playlist"><input type="submit"></a>
+</form>
     <script src='scripts/main.js'> </script>
 </body>
 </html>
