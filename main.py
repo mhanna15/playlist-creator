@@ -5,6 +5,7 @@ import jinja2
 from urllib import urlencode
 from google.appengine.api import urlfetch
 from google.appengine.api import users
+from dbload import seed_data
 
 
 jinja_env = jinja2.Environment(
@@ -53,8 +54,14 @@ class PlaylistHandler(webapp2.RequestHandler):
             'songs': songs
         }))
 
+class SeedHandler(webapp2.RequestHandler):
+    def get(self):
+        seed_data()
+        self.response.write('Data Loaded')
+
 app = webapp2.WSGIApplication([
     ('/', HomeHandler),
     ('/questions', QuestionsHandler),
-    ('/playlist', PlaylistHandler)
+    ('/playlist', PlaylistHandler),
+    ('/seed', SeedHandler),
 ], debug=True)
