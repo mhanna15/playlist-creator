@@ -2,8 +2,10 @@ section {
   /* background-color: black; */
   color: white;
   margin: auto;
-  line-height: 60px;
+  line-height: 50px;
   font-size: 30px;
+  padding-left: 20px;
+  padding-bottom: 50px; 
 
 }
 

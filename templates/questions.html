@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Questions</title>
     <link rel="stylesheet" href="styles/questions.css">
 </head>
@@ -13,7 +14,7 @@
     <div> What mood are you in today?</div>
     <section>
     <form id="moods">
-        <input type="checkbox" name="mood" value="happy"> Happy<br>
+        <input type="checkbox" name="mood" value="happy"> <span id="happy">Happy</span><br>
         <input type="checkbox" name="mood" value="Sad">Sad<br>
         <input type="checkbox" name="mood" value="Angry"> Angry<br>
         <input type="checkbox" name="mood" value="Romantic">Romantic<br>
@@ -38,5 +39,6 @@
         <input type="number" name="quantity" min="1" max="40">
     </form>
     <a href="/playlist"><input type="submit"></a>
+    <script src='scripts/main.js'> </script>
 </body>
 </html>
