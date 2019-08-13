@@ -6,6 +6,7 @@ from urllib import urlencode
 from google.appengine.api import urlfetch
 from google.appengine.api import users
 from dbload import seed_data
+from models import Song, User
 
 
 jinja_env = jinja2.Environment(
@@ -44,12 +45,11 @@ class QuestionsHandler(webapp2.RequestHandler):
         }))
 
 class PlaylistHandler(webapp2.RequestHandler):
-    def get(self):
+    def post(self):
+        limit = self.request.get('quantity')
+        genre = self.request.get('genre')
         template = jinja_env.get_template('templates/playlist.html')
-        songs = [
-            {'artist': 'Drake', 'title': 'Passion Fruit', 'duration': '3:05'},
-            {'artist': 'Drake', 'title': 'One Dance', 'duration': '3:07'},
-        ]
+        songs = Song.query().filter(Song.genre == genre).fetch(limit = int(limit))
         self.response.write(template.render({
             'songs': songs
         }))
