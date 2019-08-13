@@ -13,8 +13,3 @@ class User(ndb.Model):
     genres = ndb.StringProperty(repeated = True)
     preferredsize = ndb.IntegerProperty(required = True)
     playlist = ndb.KeyProperty(Song, repeated = True)
-
-
-
-
-

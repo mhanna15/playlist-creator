@@ -1,7 +1,7 @@
 
 
 body {
-  background-color: rgb(26, 32, 31);
+  background-color:black;
   color: white;
   margin: auto;
   line-height: 50px;
@@ -26,29 +26,26 @@ grid-column: 1;
 #moods{
   border: 2px solid white;
 
-  background-image: url('/images/topimage.jpg');
+  /* background-image: url('/images/topimage.jpg'); */
   grid-row: 2;
   padding: 20px;
 }
 
 #genres {
   border: 2px solid white;
-  border-radius: 10px;
-  background-image: url('/images/topimage.jpg');
+  /* background-image: url('/images/topimage.jpg'); */
   grid-row: 3;
 }
 
 #activity {
   border: 2px solid white;
-  border-radius: 10px;
-  background-image: url('/images/topimage.jpg');
+  /* background-image: url('/images/topimage.jpg'); */
   grid-row: 3;
 }
 
 #tracks {
   border: 2px solid white;
-  border-radius: 10px;
-  background-image: url('/images/topimage.jpg');
+  /* background-image: url('/images/topimage.jpg'); */
   grid-row: 4;
 }
 
@@ -59,17 +56,12 @@ form {
 }
 
 h2 {
-  text-shadow: 
-  -1px -1px 0 white,
-		1px -1px 0 white,
-		-1px 1px 0 white,
-    1px 1px 0 white;
+  text-shadow: 1px 1px white;
     color: rgb(255, 222, 1)
   }
 
 div {
   font-size: 25px;
-  font-weight: bold;
   font-family: 'Helvetica', serif;
 }
 
