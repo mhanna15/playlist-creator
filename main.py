@@ -63,14 +63,12 @@ class StoreProfileHandler(webapp2.RequestHandler):
         username = self.request.get('username')
         moods = self.request.get('moods')
         genres = self.request.get('genres')
-        preferredsize = int(self.request.get('preferredsize'))
         # playlist_key = Playlist()
-        users_key = Users(username = username,
+        users_key = User(username = username,
                         moods = moods,
-                        genres = genres,
-                        preferredsize = preferredsize).put()
-        self.response.write("{}, {}, {}, {}".format(
-            username, moods, genres, preferredsize))
+                        genres = genres).put()
+        self.response.write("{}, {}, {}".format(
+            username, moods, genres))
 
 app = webapp2.WSGIApplication([
     ('/', HomeHandler),
