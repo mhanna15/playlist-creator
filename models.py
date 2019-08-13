@@ -1,12 +1,20 @@
 from google.appengine.ext import ndb
 
+class Song(ndb.Model):
+    genre = ndb.StringProperty(required =  True)
+    song = ndb.StringProperty(required =  True)
+    artist = ndb.StringProperty(required =  True)
+    album = ndb.StringProperty(required =  True)
+    url = ndb.StringProperty(required =  True)
+
 class User(ndb.Model):
     username = ndb.StringProperty(required = True)
     moods = ndb.StringProperty(required = True, repeated = True)
     genres = ndb.StringProperty(required = True, repeated = True)
     preferredsize = ndb.IntegerProperty(required = True)
-    playlist = ndb.KeyProperty(Playlist, repeated = True)
+    playlist = ndb.KeyProperty(Song, repeated = True)
 
 
-class Playlist(ndb.Model):
-    songs = ndb.StringProperty(required = True, repeated = True)
+
+
+

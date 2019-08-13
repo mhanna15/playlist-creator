@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Questions</title>
-    <link rel="stylesheet" href="styles/questions.css">
+    <link rel="stylesheet" href="styles/questions.css"> 
     <link href="//db.onlinewebfonts.com/c/e43ccd3c2c2c13628d86f0b1b5a580d3?family=Recta" rel="stylesheet" type="text/css"/>
 
 </head>
@@ -16,36 +17,55 @@
 
 <div id = "quiz">
 <section>
-
     <form id="moods">
-        <!-- <section id = "topimage"><img src="images/topimage.jpg" alt="Doodle"></section> -->
-        <h2> What mood are you in today?</h2>
-        <input type="radio" name="mood" value="happy"> Happy<br>
-        <input type="radio" name="mood" value="Sad">Sad<br>
-        <input type="radio" name="mood" value="Angry"> Angry<br>
-        <input type="radio" name="mood" value="Romantic">Romantic<br>
-        <input type="radio" name="mood" value="Lonely"> Lonely<br>
-        <input type="radio" name="mood" value="Hype">Hype<br>
+        <h2>What mood are you in today?</h2>
+        
+        <input type="radio" name="mood" value="happy"> <span id="happy">Happy</span><br>
+        <input type="radio" name="mood" value="sad"> <span id="sad">Sad</span><br>
+        <input type="radio" name="mood" value="angry"> <span id="angry">Angry</span><br>
+        <input type="radio" name="mood" value="romantic"> <span id="romantic">Romantic</span><br>
+        <input type="radio" name="mood" value="lonely"> <span id="lonely">Lonely</span><br>
+        <input type="radio" name="mood" value="hype"> <span id="hype">Hype</span><br>
     </form>
 </section>
 <section>
     <form id="genres">
         <h2>What genres would you like to listen to?</h2>
         <input type="radio" name="genre" value="Rap"> Rap<br>
-        <input type="radio" name="genre" value="Jazz">Jazz<br>
+        <input type="radio" name="genre" value="Jazz"> Jazz<br>
         <input type="radio" name="genre" value="Pop"> Pop<br>
-        <input type="radio" name="genre" value="Rock">Rock<br>
+        <input type="radio" name="genre" value="Classic Rock"> Classic Rock<br>
         <input type="radio" name="genre" value="Classical"> Classical<br>
-        <input type="radio" name="genre" value="RandB">R&B<br>
+        <input type="radio" name="genre" value="RandB"> R&B<br>
+        <input type="radio" name="genre" value="Alternative"> Alternative<br>
+        <input type="radio" name="genre" value="KPop"> Kpop<br>
+        <input type="radio" name="genre" value="EDM"> EDM<br>
+        <input type="radio" name="genre" value="Indie Rock"> Indie Rock<br>
+
     </form>
-</section>
+    <section>
+    <form id="activity">
+        <h2>What activity are you doing today?</h2>
+        <input type="radio" name="activity" value="Going To Work"> Going To Work<br>
+        <input type="radio" name="activity" value="Coming From Work"> Coming From Work<br>
+        <input type="radio" name="activity" value="At The Gym"> At The Gym<br>
+        <input type="radio" name="activity" value="Partying"> Partying<br>
+        <input type="radio" name="activity" value="Going To Sleep"> Going To Sleep<br>
+        <input type="radio" name="activity" value="Waking Up"> Waking Up<br>
+        <input type="radio" name="activity" value="On A Drive"> On A Drive<br>
+        <input type="radio" name="activity" value="Packing"> Packing<br>
+        <input type="radio" name="activity" value="Cooking"> Cooking<br>
+        <input type="radio" name="activity" value="Meditation"> Meditation<br>
+        <input type="radio" name="activity" value="Getting Ready"> Getting Ready<br>
+    </form>
+    </section>
+  </section>
     <div>How many tracks do you want?</div>
     <form id="tracks">
-        Quantity (between 1 and 40):
-        <input type="number" name="quantity" min="1" max="40">
+        Quantity (between 1 and 100):
+        <input type="number" name="quantity" min="1" max="100">
     </form>
-    <input type="submit"><a href="/playlist"></a>
-</div>
-
+    <a href="/playlist"><input type="submit"></a>
+    <script src='scripts/main.js'> </script>
 </body>
 </html>

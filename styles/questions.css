@@ -4,12 +4,13 @@ body {
   background-color: rgb(26, 32, 31);
   color: white;
   margin: auto;
-  line-height: 60px;
+  line-height: 50px;
   font-size: 30px;
   font-weight: bold;
   display:grid;
   grid-template-columns: 100%;
-  grid-template-rows: 10% 40% 40% 10% ;
+  grid-template-rows: 12.5% 25% 25% 12.5% ;
+  padding: 0 30px;
 }
 
 h1 {
@@ -24,16 +25,31 @@ grid-column: 1;
 
 #moods{
   border: 2px solid white;
-  border-radius: 10px;
-  background-image: url('images/topimage.jpg');
+
+  background-image: url('/images/topimage.jpg');
   grid-row: 2;
+  padding: 20px;
 }
 
 #genres {
   border: 2px solid white;
   border-radius: 10px;
-  background-image: url('images/topimage.jpg');
+  background-image: url('/images/topimage.jpg');
   grid-row: 3;
+}
+
+#activity {
+  border: 2px solid white;
+  border-radius: 10px;
+  background-image: url('/images/topimage.jpg');
+  grid-row: 3;
+}
+
+#tracks {
+  border: 2px solid white;
+  border-radius: 10px;
+  background-image: url('/images/topimage.jpg');
+  grid-row: 4;
 }
 
 form {
