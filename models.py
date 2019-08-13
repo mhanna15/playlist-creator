@@ -9,8 +9,8 @@ class Song(ndb.Model):
 
 class User(ndb.Model):
     username = ndb.StringProperty(required = True)
-    moods = ndb.StringProperty(required = True, repeated = True)
-    genres = ndb.StringProperty(required = True, repeated = True)
+    moods = ndb.StringProperty(repeated = True)
+    genres = ndb.StringProperty(repeated = True)
     preferredsize = ndb.IntegerProperty(required = True)
     playlist = ndb.KeyProperty(Song, repeated = True)
 
