@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Questions</title>
     <link rel="stylesheet" href="styles/questions.css">
 </head>
@@ -13,12 +14,12 @@
     <div> What mood are you in today?</div>
     <section>
     <form id="moods">
-        <input type="checkbox" name="mood" value="happy"> Happy<br>
-        <input type="checkbox" name="mood" value="Sad"> Sad<br>
-        <input type="checkbox" name="mood" value="Angry"> Angry<br>
-        <input type="checkbox" name="mood" value="Romantic"> Romantic<br>
-        <input type="checkbox" name="mood" value="Lonely"> Lonely<br>
-        <input type="checkbox" name="mood" value="Hype"> Hype<br>
+        <input type="checkbox" name="mood" value="happy"> <span id="happy">Happy</span><br>
+        <input type="checkbox" name="mood" value="sad"> <span id="sad">Sad</span><br>
+        <input type="checkbox" name="mood" value="angry"> <span id="angry">Angry</span><br>
+        <input type="checkbox" name="mood" value="romantic"> <span id="romantic">Romantic</span><br>
+        <input type="checkbox" name="mood" value="lonely"> <span id="lonely">Lonely</span><br>
+        <input type="checkbox" name="mood" value="hype"> <span id="hype">Hype</span><br>
     </form>
   </section>
     <div>What genres would you like to listen to?</div>
@@ -59,6 +60,6 @@
         <input type="number" name="quantity" min="1" max="100">
     </form>
     <a href="/playlist"><input type="submit"></a>
+    <script src='scripts/main.js'> </script>
 </body>
 </html>
-

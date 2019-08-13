@@ -16,7 +16,7 @@ class HomeHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/main.html')
         self.redirect("/questions")
-    
+
     # def post(self):
     #     genre = self.request.get(genre)
     #     currentUser = users.get_current_user()
@@ -43,9 +43,15 @@ class QuestionsHandler(webapp2.RequestHandler):
         }))
 
 class PlaylistHandler(webapp2.RequestHandler):
-    def get(self):     
+    def get(self):
         template = jinja_env.get_template('templates/playlist.html')
-        self.response.write(template.render())
+        songs = [
+            {'artist': 'Drake', 'title': 'Passion Fruit', 'duration': '3:05'},
+            {'artist': 'Drake', 'title': 'One Dance', 'duration': '3:07'},
+        ]
+        self.response.write(template.render({
+            'songs': songs
+        }))
 
 app = webapp2.WSGIApplication([
     ('/', HomeHandler),
