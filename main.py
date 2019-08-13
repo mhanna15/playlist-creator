@@ -35,11 +35,20 @@ class HomeHandler(webapp2.RequestHandler):
 
 class QuestionsHandler(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
         template = jinja_env.get_template('templates/questions.html')
-        self.response.write(template.render())
+        self.response.write(template.render({
+            'nickname': user.nickname()
 
+        }))
+
+class PlaylistHandler(webapp2.RequestHandler):
+    def get(self):     
+        template = jinja_env.get_template('templates/playlist.html')
+        self.response.write(template.render())
 
 app = webapp2.WSGIApplication([
     ('/', HomeHandler),
     ('/questions', QuestionsHandler),
+    ('/playlist', PlaylistHandler)
 ], debug=True)

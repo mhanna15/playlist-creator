@@ -23,9 +23,9 @@
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
 
-        document.querySelector('h1').textContent = `Welcome, ${profile.getName()}`;
+        // document.querySelector('h1').textContent = `Welcome, ${profile.getName()}`;
       }
     </script>
-    <h1>Welcome</h1>
+    <h1>Welcome {{ nickname }}</h1>
   </body>
 </html>
