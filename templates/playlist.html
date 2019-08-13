@@ -7,7 +7,7 @@
 <body>
     <h1>Your Personalized Playlist</h1>
     <div id="Playlist">Playlist 1:</div>
-  
+
     <div id="NewPlaylist">Create New Playlist</div>
     <a href="/questions"><input type="submit" value="New Questions"></a>
 </body>
@@ -16,6 +16,10 @@
     <th>Song</th>
     <th>Artist</th>
     <th>Duration</th>
+    <th>Like</th>
+    <th>Dislike</th>
+    <th>Share</th>
+    <th>Music Video</th>
   </tr>
   {% for song in songs %}
   <tr>
@@ -28,6 +32,10 @@
     <td>
     {{song.duration}}
     </td>
+    <td>👍</td>
+    <td>👎</td>
+    <td>share</td>
+    <td>video</td>
   </tr>
   {% endfor %}
 </table>
