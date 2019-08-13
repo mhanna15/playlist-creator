@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="styles/questions.css">
 </head>
 <body>
+
     <h1>Please Answer These Questions So We Can Create This Playlist</h1>
-    <div id="question1">What mood are you in today?</div>
+    <div> What mood are you in today?</div>
+    <section>
     <form id="moods">
         <input type="checkbox" name="mood" value="happy"> Happy<br>
         <input type="checkbox" name="mood" value="Sad">Sad<br>
@@ -18,7 +20,9 @@
         <input type="checkbox" name="mood" value="Lonely"> Lonely<br>
         <input type="checkbox" name="mood" value="Hype">Hype<br>
     </form>
-    <div id="question2">What genres would you like to listen to?</div>
+  </section>
+    <div>What genres would you like to listen to?</div>
+    <section>
     <form id="genres">
         <input type="checkbox" name="genre" value="Rap"> Rap<br>
         <input type="checkbox" name="genre" value="Sad">Sad<br>
@@ -27,11 +31,13 @@
         <input type="checkbox" name="genre" value="Classical"> Classical<br>
         <input type="checkbox" name="genre" value="RandB">RandB<br>
     </form>
-    <div id=question3>How many tracks do you want?</div>
+  </section>
+    <div>How many tracks do you want?</div>
     <form id="tracks">
         Quantity (between 1 and 40):
         <input type="number" name="quantity" min="1" max="40">
     </form>
+
     <input type="submit">Submit</input>
 </body>
 </html>
