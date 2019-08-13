@@ -4,7 +4,8 @@ section {
   margin: auto;
   line-height: 60px;
   font-size: 30px;
-
+  font-weight: bold;
+  font-family: 'Circular','Helvetica','Arial' serif;
 }
 
 h1 {
@@ -14,15 +15,17 @@ h1 {
 form {
   font-size: 20px;
   font-weight: bold;
-  color: black;
+  color: white;
 }
 
 div {
   font-size: 25px;
   font-weight: bold;
-
+  color: yellow;
+  font-family: 'Helvetica', serif;
 }
 
-html {
-  background-color: #D7D017
+body {
+
+  
 }

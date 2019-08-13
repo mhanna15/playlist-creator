@@ -47,6 +47,20 @@ class PlaylistHandler(webapp2.RequestHandler):
         template = jinja_env.get_template('templates/playlist.html')
         self.response.write(template.render())
 
+class StoreProfileHandler(webapp2.RequestHandler):
+    def post(self):
+        username = self.request.get('username')
+        moods = self.request.get('moods')
+        genres = self.request.get('genres')
+        preferredsize = int(self.request.get('preferredsize'))
+        # playlist_key = Playlist()
+        users_key = Users(username = username,
+                        moods = moods,
+                        genres = genres,
+                        preferredsize = preferredsize).put()
+        self.response.write("{}, {}, {}, {}".format(
+            username, moods, genres, preferredsize))
+
 app = webapp2.WSGIApplication([
     ('/', HomeHandler),
     ('/questions', QuestionsHandler),

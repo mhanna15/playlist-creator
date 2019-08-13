@@ -1,3 +1,5 @@
+from google.appengine.ext import ndb
+
 class User(ndb.Model):
     username = ndb.StringProperty(required = True)
     moods = ndb.StringProperty(required = True, repeated = True)
