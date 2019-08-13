@@ -1,0 +1,30 @@
+body{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+h1 {
+  font-weight: 100;
+  text-align: center;
+  align-self: center;
+
+}
+
+#playlist {
+  font-size: 30px;
+
+}
+
+tr {
+  font-size: 20px;
+
+}
+
+#newplaylist {
+  position:absolute;
+  bottom:0px;
+  font-weight: 300;
+  font-size: 20px;
+}
