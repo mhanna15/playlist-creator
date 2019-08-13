@@ -14,7 +14,6 @@ jinja_env = jinja2.Environment(
 
 class HomeHandler(webapp2.RequestHandler):
     def get(self):
-        
         template = jinja_env.get_template('templates/main.html')
         self.redirect("/questions")
     
@@ -43,8 +42,13 @@ class QuestionsHandler(webapp2.RequestHandler):
 
         }))
 
+class PlaylistHandler(webapp2.RequestHandler):
+    def get(self):     
+        template = jinja_env.get_template('templates/playlist.html')
+        self.response.write(template.render())
 
 app = webapp2.WSGIApplication([
     ('/', HomeHandler),
     ('/questions', QuestionsHandler),
+    ('/playlist', PlaylistHandler)
 ], debug=True)
