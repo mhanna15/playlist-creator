@@ -73,25 +73,37 @@ class PlaylistHandler(webapp2.RequestHandler):
             'songs': songs
         }))
 
+# class DeleteHandler(webapp2.DeleteHandler):
+#     def get(self):
+
 class SeedHandler(webapp2.RequestHandler):
     def get(self):
         seed_data()
         self.response.write('Data Loaded')
-class StoreProfileHandler(webapp2.RequestHandler):
-    def post(self):
-        username = self.request.get('username')
-        moods = self.request.get('moods')
-        genres = self.request.get('genres')
+# class StoreProfileHandler(webapp2.RequestHandler):
+#     def post(self):
+#         username = self.request.get('username')
+#         moods = self.request.get('moods')
+#         genres = self.request.get('genres')
 
-        users_key = User(username = username,
-                        moods = moods,
-                        genres = genres).put()
-        self.response.write("{}, {}, {}".format(
-            username, moods, genres))
+#         users_key = User(username = username,
+#                         moods = moods,
+#                         genres = genres).put()
+#         self.response.write("{}, {}, {}".format(
+#             username, moods, genres))
+
+class ProfileHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('templates/profile.html')
+        self.response.write(template.render())
+
+
 
 app = webapp2.WSGIApplication([
     ('/', HomeHandler),
     ('/questions', QuestionsHandler),
     ('/playlist', PlaylistHandler),
     ('/seed', SeedHandler),
+    ('/profile', ProfileHandler),
+    # ('/delete', DeleteHandler),
 ], debug=True)
