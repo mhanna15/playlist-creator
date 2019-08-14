@@ -55,11 +55,7 @@ class PlaylistHandler(webapp2.RequestHandler):
         logging.info(mood)
 
         template = jinja_env.get_template('templates/playlist.html')
-<<<<<<< HEAD
         songs = Song.query().filter(Song.mood==mood).filter(Song.genre==genre).fetch(limit = int(limit))
-=======
-        songs = Song.query().filter(Song.genre == genre).filter(Song.mood == mood).fetch(limit = int(limit))
->>>>>>> 56a28fa2421644e560796624ee1210609dd1090d
         self.response.write(template.render({
             'songs': songs
         }))
