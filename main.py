@@ -8,6 +8,7 @@ from google.appengine.api import users
 from dbload import seed_data
 from models import Song, User
 import logging
+import random
 
 
 jinja_env = jinja2.Environment(
@@ -62,7 +63,12 @@ class PlaylistHandler(webapp2.RequestHandler):
         logging.info(activity)
 
         template = jinja_env.get_template('templates/playlist.html')
-        songs = Song.query().filter(Song.mood==mood).filter(Song.genre==genre).filter(Song.activity==activity).fetch(limit = int(limit))
+        songs = Song.query().filter(Song.mood==mood).filter(Song.genre==genre).filter(Song.activity==activity).fetch()
+        print(len(songs), limit)
+        numsongs = int(limit)
+        if len(songs) > numsongs:
+            songs = random.sample(songs, numsongs)
+            print(['nelson'])
         self.response.write(template.render({
             'songs': songs
         }))
