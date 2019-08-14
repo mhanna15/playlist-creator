@@ -19,30 +19,28 @@
 <form action='/playlist' method='post'>
     <section id='moods'>
         <h2>What mood are you in today?</h2>
-        <input type="radio" name="mood" value="happy"> <span id="happy">Happy</span><br>
-        <input type="radio" name="mood" value="sad"> <span id="sad">Sad</span><br>
-        <input type="radio" name="mood" value="angry"> <span id="angry">Angry</span><br>
-        <input type="radio" name="mood" value="romantic"> <span id="romantic">Romantic</span><br>
-        <input type="radio" name="mood" value="lonely"> <span id="lonely">Lonely</span><br>
-        <input type="radio" name="mood" value="hype"> <span id="hype">Hype</span><br>
+        <input type="radio" name="mood" value="Happy"> <span id="happy">Happy</span><br>
+        <input type="radio" name="mood" value="Sad"> <span id="sad">Sad</span><br>
+        <input type="radio" name="mood" value="Angry"> <span id="angry">Angry</span><br>
+        <input type="radio" name="mood" value="Romantic"> <span id="romantic">Romantic</span><br>
+        <input type="radio" name="mood" value="Lonely"> <span id="lonely">Lonely</span><br>
+        <input type="radio" name="mood" value="Hype"> <span id="hype">Hype</span><br>
     </section>
 </form>
 <form>
     <section id='genres'>
         <h2>What genres would you like to listen to?</h2>
-        <input type="radio" name="genre" value="Rap"> Rap<br>
-        <input type="radio" name="genre" value="Jazz"> Jazz<br>
-        <input type="radio" name="genre" value="Pop"> Pop<br>
-        <input type="radio" name="genre" value="Rock"> Rock<br>
-        <input type="radio" name="genre" value="Latin"> Latin<br>
-        <input type="radio" name="genre" value="R&B"> R&B<br>
-        <input type="radio" name="genre" value="K-Pop"> K-Pop<br>
-        <input type="radio" name="genre" value="EDM"> EDM<br>
-        <input type="radio" name="genre" value="Country"> Country<br>
+        <input type="checkbox" name="genre" value="Rap"> Rap<br>
+        <input type="checkbox" name="genre" value="Jazz"> Jazz<br>
+        <input type="checkbox" name="genre" value="Pop"> Pop<br>
+        <input type="checkbox" name="genre" value="Rock"> Rock<br>
+        <input type="checkbox" name="genre" value="Latin"> Latin<br>
+        <input type="checkbox" name="genre" value="R&B"> R&B<br>
+        <input type="checkbox" name="genre" value="K-Pop"> K-Pop<br>
+        <input type="checkbox" name="genre" value="EDM"> EDM<br>
+        <input type="checkbox" name="genre" value="Country"> Country<br>
     </section>
-</form>
     <section>
-    <form id="activity">
         <h2>What activity are you doing today?</h2>
         <input type="radio" name="activity" value="Going To Work"> Going To Work<br>
         <input type="radio" name="activity" value="Coming From Work"> Coming From Work<br>
@@ -61,7 +59,9 @@
         <p>Quantity (between 1 and 500):</p>
         <input type="number" name="quantity" min="1" max="100">
     </section>
-    <a href="/playlist"><input type="submit"></a>
+    <!-- <a href="/playlist"> -->
+        <input type="submit">
+    <!-- </a> -->
 </form>
     <script src='scripts/main.js'> </script>
 </body>
