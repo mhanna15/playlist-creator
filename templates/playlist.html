@@ -17,6 +17,7 @@
     <th>Like</th>
     <th>Dislike</th>
     <th>Share</th>
+    <!-- <th></th> -->
   </tr>
   {% for song in songs %}
   <tr>
@@ -32,12 +33,19 @@
     <td>👍</td>
     <td>👎</td>
     <td><a href="https://twitter.com"><img src="images/share_icon.png" alt="share button"></a></td>
+
+    <!-- TODO: might have to URL encode the song.url -->
+    <!-- <td><a href="/delete?song_url={{ song.url }}">Delete</a></td> -->
+
   </tr>
   {% endfor %}
 </table>
 <div id="newplaylist">
   <p>Create New Playlist<p>
   <a href="/questions"><input type="submit" value="New Questions"></a>
+</div>
+<div id="profilepage">
+    <a href="/profile"><input type="submit" value="Profile Page"></a>
 </div>
 </body>
 </html>

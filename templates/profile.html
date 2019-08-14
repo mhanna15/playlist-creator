@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile Page</title>
+</head>
+<body>
+    <h1>Profle Page</h1>
+    
+    <table style="width:100%">
+        <tr>
+            <th>Saved Songs</th>
+            <th>Saved Artists</th>
+            <th>Link</th>
+        </tr>
+        {% for song in songs %}
+        <tr>
+          <td>
+            {{song.song}}
+          </td>
+          <td>
+            {{song.artist}}
+          </td>
+          <td>
+            <a href='{{song.url}}'>Spotify</a>
+          </td>
+      
+          <!-- TODO: might have to URL encode the song.url -->
+          <!-- <td><a href="/delete?song_url={{ song.url }}">Delete</a></td> -->
+      
+        </tr>
+        {% endfor %}
+      </table>
+</body>
+</html>
