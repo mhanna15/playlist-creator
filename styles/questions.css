@@ -11,7 +11,8 @@ body {
   /* width: 100vw; */
   /* height: 100vh; */
   /* grid-template-columns: 100%; */
-  grid-template-rows: 12.5% 25% 25% 25% 12.5% ;
+  /* grid-template-rows: 12.5% 25% 25% 25% 12.5% ; */
+  grid-template-rows: 8% 25% 25% 25% 17%;
   padding: 0 30px;
   /* background-image: url('/images/topimage.jpg');
   background-repeat: no-repeat;
@@ -28,6 +29,8 @@ color: rgb(255, 222, 1);
 text-shadow: 1px 1px white;
 text-align:center;
 padding: 5px;
+font-family: 'Lacquer', sans-serif;
+font-size: 80px;
 }
 
 
@@ -84,9 +87,14 @@ form {
 }
 
 h2 {
-  text-shadow: 1px 1px white;
-    color: rgb(255, 222, 1)
-  }
+  text-shadow: 1px 1px black;
+  color: rgb(255, 222, 1);
+  /* font-family: 'Staatliches', cursive; */
+  font-family: 'IBM Plex Mono', monospace;
+  /* font-family: 'Fjalla One', sans-serif; */
+  /* font-family: 'Francois One', sans-serif; */
+}
+
 
 p {
   color: white;
@@ -141,4 +149,14 @@ input[type='radio']:checked:after {
 
 form {
   color: white;
+}
+
+#leftmood {
+  display: inline-block;
+  margin-right: 65px;
+}
+
+#rightmood {
+  display: inline-block;
+  margin-left: 65px;
 }
