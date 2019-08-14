@@ -16,10 +16,7 @@ jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-class HomeHandler(webapp2.RequestHandler):
-    def get(self):
-        template = jinja_env.get_template('templates/main.html')
-        self.redirect("/questions")
+
 
     # def post(self):
     #     genre = self.request.get(genre)
@@ -95,15 +92,22 @@ class SeedHandler(webapp2.RequestHandler):
 class ProfileHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/profile.html')
-        self.response.write(template.render())
+        google_user = users.get_current_user()
+        user = User.query().filter(User.email == google_user.email()).get()
+        if not user:
+            User(email=google_user.email(), nickname=google_user.nickname(), favorites=[]).put()
+        self.response.write(template.render({
+            'nickname': google_user.nickname(),
+            'logout_url': users.create_logout_url('/')
+        }))
+
 
 
 
 app = webapp2.WSGIApplication([
-    ('/', HomeHandler),
+    ('/', ProfileHandler),
     ('/questions', QuestionsHandler),
     ('/playlist', PlaylistHandler),
     ('/seed', SeedHandler),
-    ('/profile', ProfileHandler),
     # ('/delete', DeleteHandler),
 ], debug=True)
