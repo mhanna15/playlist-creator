@@ -8,57 +8,74 @@
 
     <title>Questions</title>
     <link rel="stylesheet" href="styles/questions.css"> 
-    <link href="//db.onlinewebfonts.com/c/e43ccd3c2c2c13628d86f0b1b5a580d3?family=Recta" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Carter+One|Fjalla+One|Francois+One|IBM+Plex+Mono|Lacquer|Staatliches&display=swap" rel="stylesheet">
 
 </head>
-<div id = "container">
-<h1>Please Answer These Questions So We Can Create This Playlist</h1>
-</div>
+<p id = "welcome">Welcome, {{ username }}</p>
+<h1>instrumental</h1>
+
 
 <div id = "quiz">
 <form action='/playlist' method='post'>
+
     <section id='moods'>
         <h2>What mood are you in today?</h2>
+        <div id = "left">
         <input type="radio" name="mood" value="Happy"> <span id="happy">Happy</span><br>
         <input type="radio" name="mood" value="Sad"> <span id="sad">Sad</span><br>
         <input type="radio" name="mood" value="Angry"> <span id="angry">Angry</span><br>
+        </div>
+        <div id = "right">
         <input type="radio" name="mood" value="Romantic"> <span id="romantic">Romantic</span><br>
         <input type="radio" name="mood" value="Lonely"> <span id="lonely">Lonely</span><br>
         <input type="radio" name="mood" value="Hype"> <span id="hype">Hype</span><br>
+        </div>
     </section>
+
     <section id='genres'>
         <h2>What genres would you like to listen to?</h2>
+        <div id = "left">
         <input type="checkbox" name="genre" value="Rap"> Rap<br>
         <input type="checkbox" name="genre" value="Jazz"> Jazz<br>
         <input type="checkbox" name="genre" value="Pop"> Pop<br>
         <input type="checkbox" name="genre" value="Rock"> Rock<br>
+        </div>
+        <div id = "right">
         <input type="checkbox" name="genre" value="Latin"> Latin<br>
         <input type="checkbox" name="genre" value="R&B"> R&B<br>
         <input type="checkbox" name="genre" value="K-Pop"> K-Pop<br>
         <input type="checkbox" name="genre" value="EDM"> EDM<br>
+        </div>
+        <div id = "mid">
         <input type="checkbox" name="genre" value="Country"> Country<br>
+        </div>
     </section>
+
     <section>
         <h2>What activity are you doing today?</h2>
+        <div id = "left">
         <input type="radio" name="activity" value="Going To Work"> Going To Work<br>
         <input type="radio" name="activity" value="Coming From Work"> Coming From Work<br>
         <input type="radio" name="activity" value="At The Gym"> At The Gym<br>
         <input type="radio" name="activity" value="Partying"> Partying<br>
         <input type="radio" name="activity" value="Going To Sleep"> Going To Sleep<br>
+        </div>
+        <div id = "right">
         <input type="radio" name="activity" value="Waking Up"> Waking Up<br>
         <input type="radio" name="activity" value="On A Drive"> On A Drive<br>
         <input type="radio" name="activity" value="Packing"> Packing<br>
         <input type="radio" name="activity" value="Cooking"> Cooking<br>
         <input type="radio" name="activity" value="Getting Ready"> Getting Ready<br>
+        </div>
     </section>
+
     <section id='tracks'>
         <h2>How many tracks do you want?</h2>
         <p>Quantity (between 1 and 500):</p>
         <input type="number" name="quantity" min="1" max="100">
     </section>
-    <!-- <a href="/playlist"> -->
+
         <input type="submit">
-    <!-- </a> -->
 </form>
     <script src='scripts/main.js'> </script>
 </body>
