@@ -8,6 +8,7 @@ class Song(ndb.Model):
     album = ndb.StringProperty(required =  True)
     url = ndb.StringProperty(required =  True)
     mood = ndb.StringProperty(repeated = True)
+    activity = ndb.StringProperty(repeated = True)
 
 class User(ndb.Model):
     username = ndb.StringProperty(required = True)
