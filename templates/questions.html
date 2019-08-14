@@ -11,9 +11,9 @@
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Carter+One|Fjalla+One|Francois+One|IBM+Plex+Mono|Lacquer|Staatliches&display=swap" rel="stylesheet">
 
 </head>
-<p id = "welcome">Welcome, {{ nickname }}</p>
+<div id = "profileicon"><a href = "/profile"><img src = "images/profileicon.png" alt = "Profile Icon" width = 30px height = 30px></a></div>
 <p id ="logoutlink"><a href = "{{ logout_url }}">Logout</a></p>
-<h1>instrumental</h1>
+<h1><span id = "instru">instru</span>mental</h1>
 
 
 <div id = "quiz">
@@ -73,7 +73,7 @@
     <section id='tracks'>
         <h2>How many tracks do you want?</h2>
         <p>Quantity (between 1 and 500):</p>
-        <input type="number" name="quantity" min="1" max="100">
+        <input id = "input" type="number" name="quantity" min="1" max="100">
     </section>
 
         <input id = "submit" type="submit">

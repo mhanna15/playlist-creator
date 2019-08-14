@@ -13,18 +13,10 @@
   <tr>
     <th>Song</th>
     <th>Artist</th>
-<<<<<<< HEAD
     <th style="text-align:center">Link</th>
     <th style="text-align:center">Favorite</th>
     <th style="text-align:center">Delete</th>
     <th style="text-align:center">Share</th>
-=======
-    <th>Link</th>
-    <th>Like</th>
-    <th>Dislike</th>
-    <th>Share</th>
-    <!-- <th></th> -->
->>>>>>> 23093f5d30ecce8e3dd59629dc4a7384f24da555
   </tr>
   {% for song in songs %}
   <tr>
@@ -37,19 +29,11 @@
     <td style="text-align:center">
       <a href='{{ song.url }}'><img id = "spotifyicon" src = "images/spotifyimage.png" alt = "Spotify Button"></a>
     </td>
-<<<<<<< HEAD
-    <td style="text-align:center">👍</td>
-    <td style="text-align:center">👎</td>
-    <td style="text-align:center"><a href="https://twitter.com"><img src="images/share_icon.png" alt="share button"></a></td>
-=======
-    <td>👍</td>
-    <td>👎</td>
-    <td><a href="https://www.facebook.com/sharer/sharer.php?u={{song.url}}"><img src="images/share_icon.png" alt="share button"></a></td>
+    <td style="text-align:center"><img id = "favicon" src = "images/heart.png" alt = "Heart Icon"></td>
+    <td style="text-align:center"><img id = "trashicon" src = "images/trash.png" alt = "Trash Icon"></td>
+    <td style="text-align:center"><a href="https://www.facebook.com/sharer/sharer.php?u={{song.url}}"><img id = "sharebutton" src="images/share.png" alt="share button"></a></td>
 
-    <!-- TODO: might have to URL encode the song.url -->
-    <!-- <td><a href="/delete?song_url={{ song.url }}">Delete</a></td> -->
 
->>>>>>> 23093f5d30ecce8e3dd59629dc4a7384f24da555
   </tr>
   {% endfor %}
 </table>

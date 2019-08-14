@@ -12,6 +12,7 @@ h1 {
   align-self: center;
   font-family: 'Lacquer', sans-serif;
   text-shadow: 1px 1px white;
+  margin-bottom: 20px;
 }
 
 #playlist {
@@ -23,6 +24,22 @@ h1 {
   width: 30px;
   height: 30px;
 }
+
+#sharebutton {
+  width: 20px;
+  height: 20px;
+}
+
+#favicon {
+  width: 30px;
+  height: 25px;
+}
+
+#trashicon {
+  width: 30px;
+  height: 25px;
+}
+
 td {
   font-size: 20px;
   border-bottom: 0.5px solid #333;

@@ -20,14 +20,16 @@ font-size: 80px;
 
 }
 
-#welcome {
-  position: absolute;
-  left: 15px;
+#profileicon {
+  /* left: 15px;
   top: 0;
   margin-top: 2px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 15px;
-  color: rgb(255, 222, 1);
+  width: 15px;
+  height: 15px; */
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  font-size: 18px;
 }
 
 #logoutlink {
@@ -144,10 +146,15 @@ input[type='radio']:checked:after {
 }
 
 #submit {
-  font-size: 40px;
+  font-size: 20px;
   padding: 10px;
-  background-color:  rgb(255, 222, 1);
-  color: black;
+  background-color:rgba(0,0,0,0);
+  border-color: rgb(255, 222, 1);
+  border-width: 3px;
+  color: rgb(255, 222, 1);
+  border-radius: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  back
 }
 
 form {
@@ -171,6 +178,6 @@ form {
   text-align: center;
 }
 
-input[type=radio]{
-
+#instru {
+  font-size: 40px;
 }
