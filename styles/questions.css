@@ -25,28 +25,39 @@ grid-column: 1;
 
 #moods{
   border: 2px solid white;
-
   /* background-image: url('/images/topimage.jpg'); */
   grid-row: 2;
-  padding: 20px;
+  text-align: center;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 #genres {
   border: 2px solid white;
   /* background-image: url('/images/topimage.jpg'); */
   grid-row: 3;
+  /* width: fit-content;
+  padding: 10px;
+  border-radius: 10px; */
 }
 
 #activity {
   border: 2px solid white;
   /* background-image: url('/images/topimage.jpg'); */
   grid-row: 3;
+  /* width: fit-content;
+  padding: 10px;
+  border-radius: 10px; */
 }
 
 #tracks {
   border: 2px solid white;
   /* background-image: url('/images/topimage.jpg'); */
   grid-row: 4;
+  /* width: fit-content;
+  padding: 10px;
+  border-radius: 10px; */
 }
 
 form {

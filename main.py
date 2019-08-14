@@ -49,7 +49,7 @@ class PlaylistHandler(webapp2.RequestHandler):
         limit = self.request.get('quantity')
         genre = self.request.get('genre')
         template = jinja_env.get_template('templates/playlist.html')
-        songs = Song.query().filter(Song.genre == genre).fetch(limit = int(limit))
+        songs = Song.query().filter(Song.genre == genre).filter(Song.mood == mood).fetch(limit = int(limit))
         self.response.write(template.render({
             'songs': songs
         }))
@@ -63,7 +63,7 @@ class StoreProfileHandler(webapp2.RequestHandler):
         username = self.request.get('username')
         moods = self.request.get('moods')
         genres = self.request.get('genres')
-        # playlist_key = Playlist()
+
         users_key = User(username = username,
                         moods = moods,
                         genres = genres).put()
