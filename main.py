@@ -47,15 +47,22 @@ class QuestionsHandler(webapp2.RequestHandler):
 
 class PlaylistHandler(webapp2.RequestHandler):
     def post(self):
+        logging.info("PLAYLIST HANDLER POST ...")
+
+
         limit = self.request.get('quantity')
         genre = self.request.get('genre')
         mood = self.request.get('mood')
-        # for m in mood:
-        #    userMood = m
+        
         logging.info(mood)
 
+        activity = self.request.get('activity')
+
+        logging.info("ACTIVITY:")
+        logging.info(activity)
+
         template = jinja_env.get_template('templates/playlist.html')
-        songs = Song.query().filter(Song.mood==mood).filter(Song.genre==genre).fetch(limit = int(limit))
+        songs = Song.query().filter(Song.mood==mood).filter(Song.genre==genre).filter(Song.activity==activity).fetch(limit = int(limit))
         self.response.write(template.render({
             'songs': songs
         }))
