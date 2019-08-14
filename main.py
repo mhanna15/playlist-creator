@@ -8,6 +8,7 @@ from google.appengine.api import users
 from dbload import seed_data
 from models import Song, User
 import logging
+import random
 
 
 jinja_env = jinja2.Environment(
@@ -62,30 +63,47 @@ class PlaylistHandler(webapp2.RequestHandler):
         logging.info(activity)
 
         template = jinja_env.get_template('templates/playlist.html')
-        songs = Song.query().filter(Song.mood==mood).filter(Song.genre==genre).filter(Song.activity==activity).fetch(limit = int(limit))
+        songs = Song.query().filter(Song.mood==mood).filter(Song.genre==genre).filter(Song.activity==activity).fetch()
+        print(len(songs), limit)
+        numsongs = int(limit)
+        if len(songs) > numsongs:
+            songs = random.sample(songs, numsongs)
+            print(['nelson'])
         self.response.write(template.render({
             'songs': songs
         }))
+
+# class DeleteHandler(webapp2.DeleteHandler):
+#     def get(self):
 
 class SeedHandler(webapp2.RequestHandler):
     def get(self):
         seed_data()
         self.response.write('Data Loaded')
-class StoreProfileHandler(webapp2.RequestHandler):
-    def post(self):
-        username = self.request.get('username')
-        moods = self.request.get('moods')
-        genres = self.request.get('genres')
+# class StoreProfileHandler(webapp2.RequestHandler):
+#     def post(self):
+#         username = self.request.get('username')
+#         moods = self.request.get('moods')
+#         genres = self.request.get('genres')
 
-        users_key = User(username = username,
-                        moods = moods,
-                        genres = genres).put()
-        self.response.write("{}, {}, {}".format(
-            username, moods, genres))
+#         users_key = User(username = username,
+#                         moods = moods,
+#                         genres = genres).put()
+#         self.response.write("{}, {}, {}".format(
+#             username, moods, genres))
+
+class ProfileHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('templates/profile.html')
+        self.response.write(template.render())
+
+
 
 app = webapp2.WSGIApplication([
     ('/', HomeHandler),
     ('/questions', QuestionsHandler),
     ('/playlist', PlaylistHandler),
     ('/seed', SeedHandler),
+    ('/profile', ProfileHandler),
+    # ('/delete', DeleteHandler),
 ], debug=True)
