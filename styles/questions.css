@@ -37,7 +37,6 @@ font-size: 80px;
   margin: auto;
   margin-bottom: 20px;
   padding: 10px;
-  border-radius: 10px;
 }
 
 #genres {
@@ -48,7 +47,6 @@ font-size: 80px;
   margin: auto;
   margin-bottom: 20px;
   padding: 10px;
-  border-radius: 10px;
 }
 
 #activity {
@@ -60,7 +58,6 @@ font-size: 80px;
   margin: auto;
   margin-bottom: 20px;
   padding: 10px;
-  border-radius: 10px;
 }
 
 #tracks {
@@ -69,7 +66,6 @@ font-size: 80px;
   margin: auto;
   margin-bottom: 20px;
   padding: 10px;
-  border-radius: 10px;
 }
 
 form {
@@ -88,6 +84,8 @@ h2 {
 p {
   color: white;
   font-size: 25px;
+  font-family: 'IBM Plex Mono', monospace;
+
 }
 
 
