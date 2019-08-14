@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Carter+One|Fjalla+One|Francois+One|IBM+Plex+Mono|Lacquer|Staatliches&display=swap" rel="stylesheet">
 
 </head>
-<p id = "welcome">Welcome, {{ username }}</p>
+<p id = "welcome">Welcome, {{ nickname }}</p>
+<p id ="logoutlink"><a href = "{{ logout_url }}">Logout</a></p>
 <h1>instrumental</h1>
 
 
@@ -75,7 +76,7 @@
         <input type="number" name="quantity" min="1" max="100">
     </section>
 
-        <input type="submit">
+        <input id = "submit" type="submit">
 </form>
     <script src='scripts/main.js'> </script>
 </body>

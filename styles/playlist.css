@@ -3,13 +3,15 @@ body{
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-
+  background-color: black;
+  color: rgb(255,222,1)
 }
 h1 {
   font-weight: 100;
   text-align: center;
   align-self: center;
-
+  font-family: 'Lacquer', sans-serif;
+  text-shadow: 1px 1px white;
 }
 
 #playlist {
@@ -17,9 +19,29 @@ h1 {
 
 }
 
-tr {
+#spotifyicon {
+  width: 30px;
+  height: 30px;
+}
+td {
   font-size: 20px;
+  border-bottom: 0.5px solid #333;
+  padding: 6px 0;
+  color:white;
+  font-family: 'IBM Plex Mono', monospace;
+}
 
+th {
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 2px;
+  border-bottom: 0.5px solid #333;
+  padding: 6px 0;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+table  {
+  margin-top: 30px;
 }
 
 #newplaylist {
@@ -27,4 +49,9 @@ tr {
   bottom: 0px;
   font-weight: 300;
   font-size: 20px;
+}
+
+#options {
+margin: auto;
+
 }

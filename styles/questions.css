@@ -22,13 +22,34 @@ font-size: 80px;
 
 #welcome {
   position: absolute;
-  left: 0;
+  left: 15px;
   top: 0;
   margin-top: 2px;
   font-family: 'IBM Plex Mono', monospace;
-  margin-left: 5px;
   font-size: 15px;
   color: rgb(255, 222, 1);
+}
+
+#logoutlink {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  margin-top: 2px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 15px;
+}
+
+#logoutlink a {
+  color: rgb(255, 222, 1);
+  text-decoration: none;
+}
+
+#logoutlink a:visited {
+  color: rgb(255, 222, 1);
+}
+
+#logoutlink a:hover {
+  text-shadow: 1px 1px 11px white;
 }
 
 #moods{
@@ -120,6 +141,13 @@ input[type='radio']:checked:after {
   display: inline-block;
   visibility: visible;
   border: 1px solid white;
+}
+
+#submit {
+  font-size: 40px;
+  padding: 10px;
+  background-color:  rgb(255, 222, 1);
+  color: black;
 }
 
 form {
