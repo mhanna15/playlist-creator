@@ -4,10 +4,10 @@ function layoutTitle() {
   const instru = document.querySelector("#instru")
   const mental = document.querySelector("#mental")
   const instruString = "Instru"
-  const mentalString = "mental"
+  // const mentalString = "mental"
 
   spellout(instru, instruString, 0)
-  spellout(mental, mentalString, (DELAY * instruString.length))
+  // spellout(mental, mentalString, (DELAY * instruString.length))
 }
 
 function spellout(element, string, startDelay) {
