@@ -38,10 +38,11 @@
   {% endfor %}
 </table>
 <div id="newplaylist">
-  <a href="/questions"><input id = "newplaylist" type="submit" value="Create New Playlist"></a>
+  <a href="/questions"><input id = "newplaylist" type="submit" value="Generate New Playlist"></a>
 </div>
-<div id="profilepage">
-    <a href="/"><input type="submit" value="Profile Page"></a>
+<div id="profileicon">
+        <a href = "/profile"><img src = "images/profileicon.png" alt = "Profile Icon" width = 30px height = 30px></a>
 </div>
+<p id ="logoutlink"><a href = "{{ logout_url }}">LOGOUT</a></p>
 </body>
 </html>
