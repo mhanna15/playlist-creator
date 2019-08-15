@@ -24,7 +24,7 @@ class HomeHandler(webapp2.RequestHandler):
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/main.html')
-        self.redirect("/questions")
+        self.redirect("/home")
 
     # def post(self):
     #     genre = self.request.get(genre)
@@ -124,7 +124,8 @@ class AddSongHandler(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
-    ('/', HomeHandler),
+    ('/', MainHandler),
+    ('/home', HomeHandler),
     ('/profile', ProfileHandler),
     ('/questions', QuestionsHandler),
     ('/playlist', PlaylistHandler),
