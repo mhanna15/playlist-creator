@@ -9,17 +9,18 @@
     <title>Profile Page</title>
 </head>
 <body>
-    <h1>Your Profile</h1>
-    <div id = "email">{{ nickname }}</div>
+    <h1>{{ nickname }}</h1>
+    
     <div id = "homebutton">
       <a href = "/home">HOME</a>
     </div>
     <div id ="logoutlink">
       <a href = "{{ logout_url }}">LOGOUT</a>
     </div>
+    <div id = "yourfavorites">Your Favorites</div>
     <table style="width:100%">
         <tr>
-            <th>Saved Songs</th>
+            <th>Songs</th>
             <th>Artists</th>
             <th style="text-align:center">Link</th>
             <th style="text-align:center">Delete</th>

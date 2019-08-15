@@ -99,7 +99,7 @@ class ProfileHandler(webapp2.RequestHandler):
             User(email=google_user.email(), nickname=google_user.nickname(), favorites=[]).put()
         self.response.write(template.render({
             'nickname': google_user.nickname(),
-            'logout_url': users.create_logout_url('/profile'),
+            'logout_url': users.create_logout_url('/home'),
             'favorites': [Song.get_by_id(key.id()) for key in user.favorites]
         }))
 
