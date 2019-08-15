@@ -47,6 +47,7 @@ class PlaylistHandler(webapp2.RequestHandler):
     def post(self):
         logging.info("PLAYLIST HANDLER POST ...")
 
+        # limit = 10
 
         limit = self.request.get('quantity')
         genre = self.request.get('genre')
@@ -98,10 +99,20 @@ class ProfileHandler(webapp2.RequestHandler):
             User(email=google_user.email(), nickname=google_user.nickname(), favorites=[]).put()
         self.response.write(template.render({
             'nickname': google_user.nickname(),
-            'logout_url': users.create_logout_url('/')
+            'logout_url': users.create_logout_url('/'),
+            'favorites': [Song.get_by_id(key.id()) for key in user.favorites]
         }))
 
-
+class AddSongHandler(webapp2.RequestHandler):
+    def post(self):
+        url = json.loads(self.request.body)['url']
+        song = Song.query().filter(Song.url == url).get()
+        google_user = users.get_current_user()
+        user = User.query().filter(User.email == google_user.email()).get()
+        user.favorites.append(song.key)
+        user.put()
+        self.response.headers['Content-Type'] = 'text/plain'
+        self.response.write('Song Added')
 
 
 app = webapp2.WSGIApplication([
@@ -109,5 +120,6 @@ app = webapp2.WSGIApplication([
     ('/questions', QuestionsHandler),
     ('/playlist', PlaylistHandler),
     ('/seed', SeedHandler),
+    ('/addsong', AddSongHandler),
     # ('/delete', DeleteHandler),
 ], debug=True)
