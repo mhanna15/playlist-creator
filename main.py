@@ -18,6 +18,12 @@ jinja_env = jinja2.Environment(
 
 class HomeHandler(webapp2.RequestHandler):
     def get(self):
+        template = jinja_env.get_template('templates/home.html')
+        # self.redirect("/home")
+        self.response.write(template.render())
+
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
         template = jinja_env.get_template('templates/main.html')
         self.redirect("/questions")
 
@@ -54,7 +60,7 @@ class PlaylistHandler(webapp2.RequestHandler):
         limit = self.request.get('quantity')
         genre = self.request.get('genre')
         mood = self.request.get('mood')
-        
+
         logging.info(mood)
 
         activity = self.request.get('activity')
