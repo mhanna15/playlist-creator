@@ -63,8 +63,16 @@ class PlaylistHandler(webapp2.RequestHandler):
             'songs': songs
         }))
 
-# class DeleteHandler(webapp2.DeleteHandler):
-#     def get(self):
+class DeleteHandler(webapp2.RequestHandler):
+    def post(self):
+        url = json.loads(self.request.body)['url']
+        song = Song.query().filter(Song.url == url).get()
+        google_user = users.get_current_user()
+        user = User.query().filter(User.email == google_user.email()).get()
+        user.favorites.remove(song.key)
+        user.put()
+        self.response.headers['Content-Type'] = 'text/plain'
+        self.response.write('Song Deleted')
 
 class SeedHandler(webapp2.RequestHandler):
     def get(self):
@@ -117,5 +125,5 @@ app = webapp2.WSGIApplication([
     ('/playlist', PlaylistHandler),
     ('/seed', SeedHandler),
     ('/addsong', AddSongHandler),
-    # ('/delete', DeleteHandler),
+    ('/deletesong', DeleteHandler),
 ], debug=True)
