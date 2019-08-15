@@ -21,8 +21,8 @@ h1 {
 }
 
 #spotifyicon {
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
 }
 
 #sharebutton {
@@ -31,13 +31,15 @@ h1 {
 }
 
 #favicon {
-  width: 30px;
-  height: 25px;
+  
+  -moz-box-shadow: none;
+  width: 28px;
+  height: 23px;
 }
 
 #trashicon {
-  width: 30px;
-  height: 25px;
+  width: 28px;
+  height: 23px;
 }
 
 #profileicon {
@@ -69,9 +71,10 @@ table  {
 }
 
 #newplaylist {
-  position:absolute;
+  position: relative;
+  top: 3px;
   bottom: 2px;
-  left: 3px;
+  right: 2px;
   font-size: 15px;
   padding: 5px;
   background-color:rgba(0,0,0,0);

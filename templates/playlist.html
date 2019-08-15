@@ -29,10 +29,9 @@
     <td style="text-align:center">
       <a href='{{ song.url }}'><img id = "spotifyicon" src = "images/spotifyimage.png" alt = "Spotify Button"></a>
     </td>
-    <td style="text-align:center"><img id = "favicon" src = "images/heart.png" alt = "Heart Icon"></td>
-    <td style="text-align:center"><img id = "trashicon" src = "images/trash.png" alt = "Trash Icon"></td>
+    <td style="text-align:center"><button class='like' style="border:1px solid black; background-color: transparent;"><img id = "favicon" src = "images/heart.png" alt = "Heart Icon"></button></td>
+    <td style="text-align:center"><button class='dislike' style="border:1px solid black; background-color: transparent;"><img id = "trashicon" src = "images/trash.png" alt = "Trash Icon"></button></td>
     <td style="text-align:center"><a href="https://www.facebook.com/sharer/sharer.php?u={{song.url}}"><img id = "sharebutton" src="images/share.png" alt="share button"></a></td>
-
 
   </tr>
   {% endfor %}
@@ -44,5 +43,7 @@
         <a href = "/profile"><img src = "images/profileicon.png" alt = "Profile Icon" width = 30px height = 30px></a>
 </div>
 <p id ="logoutlink"><a href = "{{ logout_url }}">LOGOUT</a></p>
+<script src="jquery-3.4.1.min.js"></script>
+<script src="scripts/playlists.js"></script>
 </body>
 </html>
