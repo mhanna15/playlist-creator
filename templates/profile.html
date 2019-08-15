@@ -7,15 +7,15 @@
     <title>Profile Page</title>
 </head>
 <body>
-    <h1>Profle Page</h1>
+    <h1>Profile Page</h1>
+    <p>Welcome, {{ nickname }}</p>
     
     <table style="width:100%">
         <tr>
             <th>Saved Songs</th>
-            <th>Saved Artists</th>
             <th>Link</th>
         </tr>
-        {% for song in songs %}
+        {% for song in favorites %}
         <tr>
           <td>
             {{song.song}}
@@ -33,5 +33,7 @@
         </tr>
         {% endfor %}
       </table>
+      <a href='/questions'>Generate New Playlist</a> | <a href="{{ logout_url }}">Logout</a>
 </body>
+<script src='scripts/playlists.js'></script>
 </html>
