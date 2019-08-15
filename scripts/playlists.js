@@ -25,7 +25,7 @@ function addSong(url) {
 
   }
 
-  document.querySelectorAll('.dislike').forEach(element => {
+document.querySelectorAll('.dislike').forEach(element => {
     element.addEventListener('click', event => {
       // addSong(element.parent.previousSibling.firstChild.href)
       deleteSong(element.parentElement.previousElementSibling.previousElementSibling.childNodes[1].href)
