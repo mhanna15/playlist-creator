@@ -39,6 +39,7 @@ font-size: 80px;
   margin-top: 2px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 15px;
+  letter-spacing: 2px;
 }
 
 #logoutlink a {
@@ -51,7 +52,7 @@ font-size: 80px;
 }
 
 #logoutlink a:hover {
-  text-shadow: 1px 1px 11px white;
+  font-style: italic;
 }
 
 #moods{
@@ -92,7 +93,7 @@ font-size: 80px;
 }
 
 form {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   color: black;
 }
@@ -128,7 +129,9 @@ input[type='radio']:after {
   content: '';
   display: inline-block;
   visibility: visible;
-  border: 1px solid white;
+  border: 3px solid white;
+  vertical-align: center;
+  justify-items: center;
 }
 
 input[type='radio']:checked:after {
@@ -142,7 +145,8 @@ input[type='radio']:checked:after {
   content: '';
   display: inline-block;
   visibility: visible;
-  border: 1px solid white;
+  border: 3px solid white;
+  vertical-align: center;
 }
 
 #submit {
@@ -154,7 +158,6 @@ input[type='radio']:checked:after {
   color: rgb(255, 222, 1);
   border-radius: 10px;
   font-family: 'IBM Plex Mono', monospace;
-  back
 }
 
 form {
@@ -180,4 +183,42 @@ form {
 
 #instru {
   font-size: 40px;
+}
+
+#input {
+  border-radius: 10px;
+  border-color: rgb(255, 222, 1);
+  border-width: 2px;
+  background-color: black;
+  color: rgb(255, 222, 1);
+  width: 40px;
+  height: 20px;
+  text-align: center;
+}
+
+input:focus, textarea {
+  outline: none !important;
+}
+input[type="checkbox"] {
+  visibility: hidden;
+}
+label {
+  cursor: pointer;
+}
+input[type="checkbox"] + label:before {
+  background: white;
+  border: 3px solid white;
+  content: "\00a0";
+  display: inline-block;
+  font: 16px/1em sans-serif;
+  margin: 0 .25em 0 0;
+  padding: 0;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+}
+input[type="checkbox"]:checked + label:before {
+  
+  background: rgb(255, 222, 1);
 }

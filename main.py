@@ -101,8 +101,9 @@ class AddSongHandler(webapp2.RequestHandler):
         song = Song.query().filter(Song.url == url).get()
         google_user = users.get_current_user()
         user = User.query().filter(User.email == google_user.email()).get()
-        user.favorites.append(song.key)
-        # list(song(lambda).add(song.key))
+        # user.favorites = list(set(user.favorites).add(song.key))
+        if song.key not in user.favorites:
+            user.favorites.append(song.key)
         user.put()
         self.response.headers['Content-Type'] = 'text/plain'
         self.response.write('Song Added')

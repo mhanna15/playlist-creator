@@ -21,8 +21,8 @@ h1 {
 }
 
 #spotifyicon {
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
 }
 
 #sharebutton {
@@ -31,13 +31,22 @@ h1 {
 }
 
 #favicon {
-  width: 30px;
-  height: 25px;
+  
+  -moz-box-shadow: none;
+  width: 28px;
+  height: 23px;
 }
 
 #trashicon {
-  width: 30px;
-  height: 25px;
+  width: 28px;
+  height: 23px;
+}
+
+#profileicon {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  font-size: 18px;
 }
 
 td {
@@ -62,13 +71,47 @@ table  {
 }
 
 #newplaylist {
-  position:absolute;
-  bottom: 0px;
-  font-weight: 300;
-  font-size: 20px;
-}
+  position: relative;
+  top: 3px;
+  bottom: 2px;
+  right: 2px;
+  font-size: 15px;
+  padding: 5px;
+  background-color:rgba(0,0,0,0);
+  border-color: rgb(255, 222, 1);
+  border-width: 3px;
+  color: rgb(255, 222, 1);
+  border-radius: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  }
 
 #options {
 margin: auto;
+}
 
+#logoutlink {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  margin-top: 2px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+#logoutlink a {
+  color: rgb(255, 222, 1);
+  text-decoration: none;
+}
+
+#logoutlink a:visited {
+  color: rgb(255, 222, 1);
+}
+
+#logoutlink a:hover {
+  font-style: italic;
+}
+
+input:focus, textarea {
+  outline: none !important;
 }
