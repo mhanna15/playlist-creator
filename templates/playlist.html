@@ -29,10 +29,9 @@
     <td style="text-align:center">
       <a href='{{ song.url }}'><img id = "spotifyicon" src = "images/spotifyimage.png" alt = "Spotify Button"></a>
     </td>
-    <td style="text-align:center"><img id = "favicon" src = "images/heart.png" alt = "Heart Icon"></td>
-    <td style="text-align:center"><img id = "trashicon" src = "images/trash.png" alt = "Trash Icon"></td>
+    <td style="text-align:center"><button class='like'><img id = "favicon" src = "images/heart.png" alt = "Heart Icon"></button></td>
+    <td style="text-align:center"><button class='dislike'><img id = "trashicon" src = "images/trash.png" alt = "Trash Icon"></button></td>
     <td style="text-align:center"><a href="https://www.facebook.com/sharer/sharer.php?u={{song.url}}"><img id = "sharebutton" src="images/share.png" alt="share button"></a></td>
-
 
   </tr>
   {% endfor %}
