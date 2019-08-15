@@ -39,8 +39,8 @@ class QuestionsHandler(webapp2.RequestHandler):
         user = users.get_current_user()
         template = jinja_env.get_template('templates/questions.html')
         self.response.write(template.render({
-            'nickname': user.nickname()
-
+            'nickname': user.nickname(),
+            'logout_url':users.create_logout_url('/')
         }))
 
 class PlaylistHandler(webapp2.RequestHandler):

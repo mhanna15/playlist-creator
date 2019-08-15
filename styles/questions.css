@@ -20,15 +20,38 @@ font-size: 80px;
 
 }
 
-#welcome {
+#profileicon {
+  /* left: 15px;
+  top: 0;
+  margin-top: 2px;
+  width: 15px;
+  height: 15px; */
   position: absolute;
-  left: 0;
+  top: 12px;
+  left: 16px;
+  font-size: 18px;
+}
+
+#logoutlink {
+  position: absolute;
+  right: 15px;
   top: 0;
   margin-top: 2px;
   font-family: 'IBM Plex Mono', monospace;
-  margin-left: 5px;
   font-size: 15px;
+}
+
+#logoutlink a {
   color: rgb(255, 222, 1);
+  text-decoration: none;
+}
+
+#logoutlink a:visited {
+  color: rgb(255, 222, 1);
+}
+
+#logoutlink a:hover {
+  text-shadow: 1px 1px 11px white;
 }
 
 #moods{
@@ -122,6 +145,18 @@ input[type='radio']:checked:after {
   border: 1px solid white;
 }
 
+#submit {
+  font-size: 20px;
+  padding: 10px;
+  background-color:rgba(0,0,0,0);
+  border-color: rgb(255, 222, 1);
+  border-width: 3px;
+  color: rgb(255, 222, 1);
+  border-radius: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  back
+}
+
 form {
   color: white;
 }
@@ -143,6 +178,6 @@ form {
   text-align: center;
 }
 
-input[type=radio]{
-
+#instru {
+  font-size: 40px;
 }

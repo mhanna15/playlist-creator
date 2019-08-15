@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/styles/playlist.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Carter+One|Fjalla+One|Francois+One|IBM+Plex+Mono|Lacquer|Staatliches&display=swap" rel="stylesheet">
     <title>Playlist</title>
 </head>
 <body>
     <h1>Your Personalized Playlist</h1>
-    <div id="playlist">Playlist 1:</div>
 
 <table style="width:100%">
   <tr>
     <th>Song</th>
     <th>Artist</th>
-    <th>Link</th>
-    <th>Like</th>
-    <th>Dislike</th>
-    <th>Share</th>
-    <!-- <th></th> -->
+    <th style="text-align:center">Link</th>
+    <th style="text-align:center">Favorite</th>
+    <th style="text-align:center">Delete</th>
+    <th style="text-align:center">Share</th>
   </tr>
   {% for song in songs %}
   <tr>
@@ -27,24 +26,19 @@
     <td>
       {{song.artist}}
     </td>
-    <td>
-      <a name = 'url' href='{{song.url}}'>Spotify</a>
+    <td style="text-align:center">
+      <a href='{{ song.url }}'><img id = "spotifyicon" src = "images/spotifyimage.png" alt = "Spotify Button"></a>
     </td>
-      <!-- <td><input type="submit" value="👍"></td>
-      <td><input type="submit" value="👎"></td> -->
-      <td><button class='like'>👍</button></td>
-      <td><button class='dislike'>👎</button></td>
-    <td><a href="https://twitter.com"><img src="images/share_icon.png" alt="share button"></a></td>
+    <td style="text-align:center"><img id = "favicon" src = "images/heart.png" alt = "Heart Icon"></td>
+    <td style="text-align:center"><img id = "trashicon" src = "images/trash.png" alt = "Trash Icon"></td>
+    <td style="text-align:center"><a href="https://www.facebook.com/sharer/sharer.php?u={{song.url}}"><img id = "sharebutton" src="images/share.png" alt="share button"></a></td>
 
-    <!-- TODO: might have to URL encode the song.url -->
-    <!-- <td><a href="/delete?song_url={{ song.url }}">Delete</a></td> -->
 
   </tr>
   {% endfor %}
 </table>
 <div id="newplaylist">
-  <p>Create New Playlist<p>
-  <a href="/questions"><input type="submit" value="New Questions"></a>
+  <a href="/questions"><input id = "newplaylist" type="submit" value="Create New Playlist"></a>
 </div>
 <div id="profilepage">
     <a href="/"><input type="submit" value="Profile Page"></a>
