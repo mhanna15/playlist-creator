@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/styles/profile.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Carter+One|Fjalla+One|Francois+One|IBM+Plex+Mono|Lacquer|Staatliches&display=swap" rel="stylesheet">
     <title>Profile Page</title>
 </head>
 <body>
-    <h1>Profile Page</h1>
-    <p>Welcome, {{ nickname }}</p>
-    
+    <h1>Your Profile</h1>
+    <div id = "email">{{ nickname }}</div>
+    <div id = "homebutton">
+      <a href = "/home">HOME</a>
+    </div>
+    <div id ="logoutlink">
+      <a href = "{{ logout_url }}">LOGOUT</a>
+    </div>
     <table style="width:100%">
         <tr>
             <th>Saved Songs</th>
-            <th>Link</th>
+            <th>Artists</th>
+            <th style="text-align:center">Link</th>
+            <th style="text-align:center">Delete</th>
+            <th style="text-align:center">Share</th>
         </tr>
         {% for song in favorites %}
         <tr>
@@ -23,17 +33,24 @@
           <td>
             {{song.artist}}
           </td>
-          <td>
-            <a href='{{song.url}}'>Spotify</a>
+          <td style="text-align:center">
+              <a href='{{ song.url }}'><img id = "spotifyicon" src = "images/spotifyimage.png" alt = "Spotify Button"></a>
           </td>
-      
+          <td style="text-align:center">
+            <button class='dislike' style="border:1px solid black; background-color: transparent;"><img id = "trashicon" src = "images/trash.png" alt = "Trash Icon"></button>
+          </td>
+          <td style="text-align:center">
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{song.url}}"><img id = "sharebutton" src="images/share.png" alt="share button"></a>
+          </td>
           <!-- TODO: might have to URL encode the song.url -->
           <!-- <td><a href="/delete?song_url={{ song.url }}">Delete</a></td> -->
       
         </tr>
         {% endfor %}
       </table>
-      <a href='/questions'>Generate New Playlist</a> | <a href="{{ logout_url }}">Logout</a>
+    <div id="newplaylist">
+     <a href="/questions"><input id ="newplaylist" type="submit" value="Generate New Playlist"></a>
+    </div>
 </body>
 <script src='scripts/playlists.js'></script>
 </html>
