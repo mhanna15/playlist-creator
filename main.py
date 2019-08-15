@@ -19,7 +19,6 @@ jinja_env = jinja2.Environment(
 class HomeHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/home.html')
-        # self.redirect("/home")
         self.response.write(template.render())
 
 class MainHandler(webapp2.RequestHandler):
@@ -108,7 +107,7 @@ class ProfileHandler(webapp2.RequestHandler):
             User(email=google_user.email(), nickname=google_user.nickname(), favorites=[]).put()
         self.response.write(template.render({
             'nickname': google_user.nickname(),
-            'logout_url': users.create_logout_url('/'),
+            'logout_url': users.create_logout_url('/profile'),
             'favorites': [Song.get_by_id(key.id()) for key in user.favorites]
         }))
 
@@ -125,7 +124,8 @@ class AddSongHandler(webapp2.RequestHandler):
 
 
 app = webapp2.WSGIApplication([
-    ('/', ProfileHandler),
+    ('/', HomeHandler),
+    ('/profile', ProfileHandler),
     ('/questions', QuestionsHandler),
     ('/playlist', PlaylistHandler),
     ('/seed', SeedHandler),
