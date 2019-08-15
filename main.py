@@ -18,6 +18,11 @@ jinja_env = jinja2.Environment(
 
 class HomeHandler(webapp2.RequestHandler):
     def get(self):
+        google_user = users.get_current_user()
+        user = User.query().filter(User.email == google_user.email()).get()
+        if not user:
+            user = User(email=google_user.email(), nickname=google_user.nickname(), favorites=[])
+            user.put()
         template = jinja_env.get_template('templates/home.html')
         self.response.write(template.render())
 
@@ -95,8 +100,6 @@ class ProfileHandler(webapp2.RequestHandler):
         template = jinja_env.get_template('templates/profile.html')
         google_user = users.get_current_user()
         user = User.query().filter(User.email == google_user.email()).get()
-        if not user:
-            User(email=google_user.email(), nickname=google_user.nickname(), favorites=[]).put()
         self.response.write(template.render({
             'nickname': google_user.nickname(),
             'logout_url': users.create_logout_url('/home'),
