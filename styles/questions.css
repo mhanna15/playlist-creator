@@ -199,7 +199,7 @@ form {
 input:focus, textarea {
   outline: none !important;
 }
-input[type="checkbox"] {
+/* input[type="checkbox"] {
   visibility: hidden;
 }
 label {
@@ -221,4 +221,4 @@ input[type="checkbox"] + label:before {
 input[type="checkbox"]:checked + label:before {
   
   background: rgb(255, 222, 1);
-}
+} */
