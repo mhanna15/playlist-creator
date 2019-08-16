@@ -140,4 +140,13 @@ td {
 #trashicon {
     width: 28px;
     height: 23px;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+input:focus, textarea {
+    outline: none !important;
   }

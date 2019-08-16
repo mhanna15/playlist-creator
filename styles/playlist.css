@@ -115,3 +115,8 @@ margin: auto;
 input:focus, textarea {
   outline: none !important;
 }
+
+button {
+  outline: none;
+  border: none;
+}
